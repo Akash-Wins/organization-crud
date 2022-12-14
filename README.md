@@ -22,7 +22,7 @@
 * Step2 - npm start
 
 ## SETUP ENVIROMENT
-* npm install i -------------------node module install
+* npm  init     -------------------node module install
 
 * npm install express -------------express package install
 
@@ -38,7 +38,7 @@
 
 * npm install nodemon -------------nodemon install
 
-## All Version 
+## All PACKAGE Version 
 * node     - 16.0.0
 
 * express  - 4.18.2
@@ -57,7 +57,7 @@
 
 * nodemon  - 2.0.20
 
-## DISCRIPTION OF PACKAGE
+## DESCRIPTION OF PACKAGE
 
 * #### Express
    Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a       single page, multipage, and hybrid web application.
@@ -80,7 +80,7 @@
 * #### Nodemon 
    Nodemon is a popular tool that is used for the development of applications based on node. js. It simply restarts the node application whenever it observes the changes in the file present in the working directory of your project.
 
-## PROJECT DISCRIPTION
+## PROJECT DESCRIPTION
 * In this project i have build user with it's organization.
 * For password security i have used bcrypt to hashing a password.
 * For input field validation i have used joi validation.
@@ -89,22 +89,23 @@
 
 * All this fields are required when user register and the organization fields are optional 
 
-* FIRSTNAME: Required (should be minimum 5 characters)
-* LASTNAME : Required (should be minimum 5 characters)
-* EMAIL :    Required (should be minimum 10 characters)
-* USERNAME : Required (should be minimum 5 characters) --> Unique
-* PASSWORD : Required (should be minimum 10 characters)
+* Firstname: Required (should be minimum 5 characters)
+* Lastname : Required (should be minimum 5 characters)
+* Email :    Required (should be minimum 10 characters)
+* Username : Required (should be minimum 5 characters) --> Unique
+* Password : Required (should be minimum 10 characters)
 
 ## USER LOGIN OVERVIEW
 * User will login from username and password after then token is generated which is authorize the user to access the entire information.
-* USERNAME : Required 
-* PASSWORD : Required 
+
+* Username : Required 
+* Password : Required 
 
 ## PROFILE INFORMATION
 * User will get profile information with the help of token which is generated at the time of login
 
 ## USER PROFILE UPDATE
-* User can update your username but make sure the username will be not same because it will be unique. (optional but not empty)
+* User can update username but make sure the username will be not same because it will be unique. (optional but not empty)
 * User can update your firstname (optional but not empty)
 * User can update your lastname  (optional but not empty)
 * User can update your email     (optional but not empty)

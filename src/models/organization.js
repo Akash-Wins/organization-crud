@@ -14,6 +14,10 @@ const organizationSchema = new Schema({
     type: String,
     required: false,
   },
+  isActive:{
+    type:Boolean,
+    required:false
+  },
   address:{
     address1: {
       type: String,
@@ -38,10 +42,6 @@ const organizationSchema = new Schema({
     zipCode: {
       type: Number,
       required: false,
-    },
-    isActive:{
-      type:Boolean,
-      required:false
     }
   } 
 },{timestamps:true});
