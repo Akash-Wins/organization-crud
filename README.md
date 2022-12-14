@@ -89,17 +89,17 @@
 
 * All this fields are required when user register and the organization fields are optional 
 
-* Firstname: Required (should be minimum 5 characters)
-* Lastname : Required (should be minimum 5 characters)
-* Email :    Required (should be minimum 10 characters)
-* Username : Required (should be minimum 5 characters) --> Unique
-* Password : Required (should be minimum 10 characters)
+* Firstname: required (should be minimum 5 characters)
+* Lastname : required (should be minimum 5 characters)
+* Email :    required (should be minimum 10 characters)
+* Username : required (should be minimum 5 characters) --> Unique
+* Password : required (should be minimum 10 characters)
 
 ## USER LOGIN OVERVIEW
 * User will login from username and password after then token is generated which is authorize the user to access the entire information.
 
-* Username : Required 
-* Password : Required 
+* Username : required 
+* Password : required 
 
 ## PROFILE INFORMATION
 * User will get profile information with the help of token which is generated at the time of login
