@@ -16,7 +16,7 @@ const organizationSchema = new Schema({
   },
   isActive:{
     type:Boolean,
-    required:false
+    default:true
   },
   address:{
     address1: {

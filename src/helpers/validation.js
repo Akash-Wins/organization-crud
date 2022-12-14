@@ -8,12 +8,11 @@ const userSchema = joi.object({
   password: joi.string().min(5).max(20).trim().required(),
   organization: joi.object({
       orgName: joi.string().min(5).max(20).trim().required(),
-      address: joi
-        .object({
+      address: joi.object({
           address1: joi.string().min(5).max(20).trim().required(),
           address2: joi.string().min(5).max(20).trim().optional(),
           city: joi.string().min(5).max(15).trim().required(),
-          state: joi.string().min(5).max(15).trim().required(),
+          state: joi.string().min(2).max(15).trim().required(),
           country: joi.string().min(5).max(20).trim().required(),
           zipCode: joi.string().min(4).max(8).required(),
         }).optional(),
@@ -26,7 +25,7 @@ const organizationSchema = joi.object({
       address1: joi.string().min(5).max(20).trim().required(),
       address2: joi.string().min(5).max(20).trim().required(),
       city: joi.string().min(5).max(15).trim().required(),
-      state: joi.string().min(5).max(15).trim().required(),
+      state: joi.string().min(2).max(15).trim().required(),
       country: joi.string().min(5).max(20).trim().required(),
       zipCode: joi.string().min(5).max(8).required(),
     }).optional(),
@@ -37,7 +36,20 @@ const userUpdate = joi.object({
   email: joi.string().email().min(5).trim().optional(),
   userName: joi.string().min(5).trim().optional(),
   password: joi.string().min(5).max(20).trim().optional(),
+  updatePassword:joi.boolean().optional()
 });
+
+const orgUpdate = joi.object({
+  orgName: joi.string().min(5).max(20).trim().required(),
+  address: joi.object({
+      address1: joi.string().min(5).max(20).trim().required(),
+      address2: joi.string().min(5).max(20).trim().required(),
+      city: joi.string().min(5).max(15).trim().required(),
+      state: joi.string().min(2).max(15).trim().required(),
+      country: joi.string().min(5).max(20).trim().required(),
+      zipCode: joi.string().min(5).max(8).required(),
+    }).optional(),
+})
 
 const login = joi.object({
   userName: joi.string().min(5).trim().required(),
@@ -58,6 +70,7 @@ const validationHelper = (route, method) => {
     case "put":
       obj = {
         "/user/update": userUpdate,
+        "/user/orgupdate/:id":orgUpdate
       };
       return obj[route];
       break;

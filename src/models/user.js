@@ -31,10 +31,6 @@ const userSchema = new Schema({
   isDeleted: {
     type: Boolean,
     default: false,
-  },
-  updatePassword:{
-    type: Boolean,
-    default:false
   }
 },{timestamps:true});
 userSchema.pre("save", async function (next) {
